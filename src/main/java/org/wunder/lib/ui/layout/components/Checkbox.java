@@ -13,6 +13,11 @@ public class Checkbox extends AbstractVanillaComponent<net.minecraft.client.gui.
     public static SelectionChanged IGNORE_CHANGE = (a, b) -> {
     };
 
+    @Override
+    public boolean isFocused() {
+        return super.vanillaComponent.isFocused();
+    }
+
     @FunctionalInterface
     public interface SelectionChanged {
         void now(Checkbox checkBox, boolean selected);

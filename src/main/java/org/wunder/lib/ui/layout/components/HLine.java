@@ -6,6 +6,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
 import org.wunder.lib.ui.ColorHelper;
+import org.wunder.lib.ui.layout.components.render.ComponentRenderer;
 import org.wunder.lib.ui.layout.components.render.RenderHelper;
 import org.wunder.lib.ui.layout.values.Alignment;
 import org.wunder.lib.ui.layout.values.Rectangle;
@@ -14,6 +15,7 @@ import org.wunder.lib.ui.layout.values.Value;
 @Environment(EnvType.CLIENT)
 public class HLine extends CustomRenderComponent {
     private int color = ColorHelper.DEFAULT_TEXT;
+    private ComponentRenderer componentRenderer;
 
     public HLine(Value width, Value height) {
         super(width, height);
@@ -42,5 +44,14 @@ public class HLine extends CustomRenderComponent {
     @Override
     public int getContentHeight() {
         return 1;
+    }
+
+    @Override
+    public void setFocused(boolean bl) {
+    }
+
+    @Override
+    public boolean isFocused() {
+        return false;
     }
 }

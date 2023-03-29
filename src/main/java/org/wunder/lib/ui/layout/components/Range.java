@@ -11,6 +11,11 @@ import org.wunder.lib.ui.vanilla.Slider;
 
 @Environment(EnvType.CLIENT)
 public class Range<N extends Number> extends AbstractVanillaComponent<Slider<N>, Range<N>> {
+    @Override
+    public boolean isFocused() {
+        return renderer.linkedComponent.isFocused();
+    }
+
     @FunctionalInterface
     public interface ValueChanged<N extends Number> {
         void now(Range<N> range, N newValue);

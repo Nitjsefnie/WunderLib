@@ -126,10 +126,9 @@ public abstract class AbstractVanillaComponent<C extends AbstractWidget, V exten
     }
 
     @Override
-    public boolean changeFocus(boolean bl) {
+    public void setFocused(boolean bl) {
         if (vanillaComponent != null && enabled)
-            return vanillaComponent.changeFocus(bl);
-        return false;
+            vanillaComponent.setFocused(bl);
     }
 
     @Override

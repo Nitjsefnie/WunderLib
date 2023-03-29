@@ -316,11 +316,9 @@ public class Float3 {
     }
 
     public static BlockPos toBlockPos(double x, double y, double z) {
-        return new BlockPos(
-                toBlockPos(x),
-                toBlockPos(y),
-                toBlockPos(z)
-        );
+        return new BlockPos((int) Math.floor(toBlockPos(x)),
+                (int) Math.floor(toBlockPos(y)),
+                (int) Math.floor(toBlockPos(z)));
     }
 
     @Override

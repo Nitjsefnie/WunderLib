@@ -173,4 +173,13 @@ public class MultiLineText extends LayoutComponent<MultiLineText.MultiLineTextRe
     public boolean isMouseOver(double d, double e) {
         return false;
     }
+
+    @Override
+    public void setFocused(boolean bl) {
+    }
+
+    @Override
+    public boolean isFocused() {
+        return false;
+    }
 }

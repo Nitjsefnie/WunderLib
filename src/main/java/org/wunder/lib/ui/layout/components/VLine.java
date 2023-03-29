@@ -48,4 +48,13 @@ public class VLine extends CustomRenderComponent {
     public boolean isMouseOver(double d, double e) {
         return false;
     }
+
+    @Override
+    public void setFocused(boolean bl) {
+    }
+
+    @Override
+    public boolean isFocused() {
+        return false;
+    }
 }

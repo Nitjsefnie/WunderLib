@@ -17,6 +17,11 @@ public class Button extends AbstractVanillaComponent<net.minecraft.client.gui.co
     public static final OnPress NO_ACTION = (button) -> {
     };
 
+    @Override
+    public boolean isFocused() {
+        return super.vanillaComponent.isFocused();
+    }
+
     @Environment(EnvType.CLIENT)
     public interface OnTooltip {
         void onTooltip(Button button, PoseStack poseStack, int mouseX, int mouseY);

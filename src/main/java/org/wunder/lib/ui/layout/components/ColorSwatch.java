@@ -65,4 +65,14 @@ public class ColorSwatch extends CustomRenderComponent<ColorSwatch> {
     public int getContentHeight() {
         return 20;
     }
+
+    @Override
+    public void setFocused(boolean bl) {
+        renderer.linkedComponent.setFocused(bl);
+    }
+
+    @Override
+    public boolean isFocused() {
+        return renderer.linkedComponent.isFocused();
+    }
 }
